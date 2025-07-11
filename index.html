@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Wiki & Tracker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Pixelify Sans (Body) and Press Start 2P (Headers) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="minecraft-bg">
+    <header class="bg-gray-950 bg-opacity-90 py-4 shadow-lg">
+        <div class="container flex flex-col md:flex-row justify-between items-center header-nav">
+            <h1 class="text-4xl font-bold text-white mb-4 md:mb-0 text-shadow">Minecraft Hub</h1>
+            
+            <div class="navbar-dropdown">
+                <button id="dropdown-btn" class="btn">Menu</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#enchantments">Enchantments</a>
+                    <a href="#crafting-recipes">Recipes</a>
+                    <a href="#potion-guide">Potions</a>
+                    <a href="#mob-info">Mobs</a>
+                    <a href="#resource-guide">Resources</a>
+                    <a href="#project-planner">Projects</a>
+                    <a href="#quick-notes">Quick Notes</a>
+                    <a href="#advancements">Advancements</a>
+                    <a href="#more-stuff">More Stuff</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-8">
+        <!-- Enchantments Section -->
+        <section id="enchantments" class="mb-12">
+            <h2 class="section-title">Best Enchantments by Item</h2>
+            <div class="grid gap-8 enchantment-grid">
+                <!-- Helmet Enchantments -->
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Helmet_(item).gif" id = "piece_icon"> Helmet
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Protection IV</strong>
+                        <p>Reduces all damage.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Repairs with experience orbs.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Respiration III</strong>
+                        <p>Extends underwater breathing time.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Aqua Affinity</strong>
+                        <p>Increases underwater mining speed.</p>
+                    </div>
+                </div>
+
+                <!-- Chestplate Enchantments -->
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Chestplate_(item).gif" id = "piece_icon"> Chestplate
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Protection IV</strong>
+                        <p>Reduces all damage.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Repairs with experience orbs.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Thorns III</strong>
+                        <p>Damages attackers (use with caution due to durability).</p>
+                    </div>
+                </div>
+
+                <!-- Leggings Enchantments -->
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Leggings_(item).gif" id = "piece_icon"> Leggings
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Protection IV</strong>
+                        <p>Reduces all damage.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Repairs with experience orbs.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Thorns III</strong>
+                        <p>Damages attackers (use with caution due to durability).</p>
+                    </div>
+                </div>
+
+                <!-- Boots Enchantments -->
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Boots_(item).gif" id = "piece_icon"> Boots
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Protection IV</strong>
+                        <p>Reduces all damage.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Repairs with experience orbs.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Feather Falling IV</strong>
+                        <p>Reduces fall damage significantly.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Depth Strider III</strong>
+                        <p>Increases underwater movement speed.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Frost Walker II</strong>
+                        <p>Freezes water into frosted ice when walking over it.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Pickaxe.gif" id = "piece_icon"> Pickaxe
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Efficiency V</strong>
+                        <p>Increases mining speed.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Fortune III</strong>
+                        <p>Increases block drops (e.g., diamonds, coal).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Silk Touch</strong>
+                        <p>Mines blocks themselves (e.g., ore blocks, glass).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Axe.gif" id = "piece_icon"> Axe
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Efficiency V</strong>
+                        <p>Increases chopping speed.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Sharpness V / Smite V / Bane of Arthropods V</strong>
+                        <p>Increases damage (can be used as a weapon).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Silk Touch</strong>
+                        <p>Mines blocks themselves (e.g., mushroom blocks).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Shovel.gif" id = "piece_icon"> Shovel
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Efficiency V</strong>
+                        <p>Increases digging speed.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Fortune III</strong>
+                        <p>Increases gravel/flint drops.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Silk Touch</strong>
+                        <p>Mines blocks themselves (e.g., grass blocks, mycelium).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Diamond_Sword.gif" id = "piece_icon"> Sword
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Sharpness V / Smite V / Bane of Arthropods V</strong>
+                        <p>Increases melee damage against all mobs or specific types.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Looting III</strong>
+                        <p>Increases mob drops and rare drops.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Sweeping Edge III</strong>
+                        <p>Increases damage dealt by sweeping attacks.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Fire Aspect II</strong>
+                        <p>Sets enemies on fire.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Knockback II</strong>
+                        <p>Knocks enemies back when hit.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Bow.gif" id = "piece_icon"> Bow
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Power V</strong>
+                        <p>Increases arrow damage.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Infinity</strong>
+                        <p>Allows firing infinite arrows as long as you have at least one arrow in your inventory.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Punch II</strong>
+                        <p>Knocks enemies back when hit by an arrow.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item (cannot be combined with Infinity).</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Elytra_(Item).gif" id = "piece_icon"> Elytra
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Trident.gif" id = "piece_icon"> Trident
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Loyalty III</strong>
+                        <p>Returns the trident to the player after being thrown.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Impaling V</strong>
+                        <p>Increases damage against aquatic mobs.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Channeling</strong>
+                        <p>Summons a lightning bolt at the struck entity during a thunderstorm.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Riptide III</strong>
+                        <p>Launches the player with the trident when thrown in water or rain.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">
+                        <img src="icons/Enchanted_Fishing_Rod.gif" id = "piece_icon"> Fishing Rod
+                    </h3>
+                    <div class="enchantment-item">
+                        <strong>Luck of the Sea III</strong>
+                        <p>Increases the chance of catching valuable items.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Lure III</strong>
+                        <p>Decreases the wait time for a bite.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Mending</strong>
+                        <p>Uses experience orbs to repair the item.</p>
+                    </div>
+                    <div class="enchantment-item">
+                        <strong>Unbreaking III</strong>
+                        <p>Increases item durability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crafting & Smelting Recipes Section -->
+        <section id="crafting-recipes" class="mb-12">
+            <h2 class="section-title">Crafting & Smelting Recipes</h2>
+            <div class="grid gap-8 recipe-grid">
+                <div class="card">
+                    <h3 class="subsection-title">Crafting Table</h3>
+                    <div class="recipe-item">
+                        <strong>Recipe:</strong> 4 Wood Planks (any type)
+                        <p>Required for most crafting.</p>
+                        <p><strong>Layout:</strong> 2x2 grid of planks.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Furnace</h3>
+                    <div class="recipe-item">
+                        <strong>Recipe:</strong> 8 Cobblestone
+                        <p>Used for smelting ores, cooking food, and making glass.</p>
+                        <p><strong>Layout:</strong> Cobblestone in all slots except the center.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Iron Pickaxe</h3>
+                    <div class="recipe-item">
+                        <strong>Recipe:</strong> 3 Iron Ingots, 2 Sticks
+                        <p>Mines stone, iron, coal, and other basic ores.</p>
+                        <p><strong>Layout:</strong> 3 Ingots top row, 1 Stick middle-center, 1 Stick bottom-center.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Glass</h3>
+                    <div class="recipe-item">
+                        <strong>Smelting:</strong> Sand + Fuel
+                        <p>Used for windows and decorative blocks.</p>
+                    </div>
+                </div>
+                <!-- Add more recipes here -->
+            </div>
+        </section>
+
+        <!-- Potion Brewing Guide Section -->
+        <section id="potion-guide" class="mb-12">
+            <h2 class="section-title">Potion Brewing Guide</h2>
+            <div class="grid gap-8 potion-grid">
+                <div class="card">
+                    <h3 class="subsection-title">Potion of Healing (Instant Health)</h3>
+                    <div class="potion-item">
+                        <strong>Base:</strong> Awkward Potion
+                        <p><strong>Ingredient 1:</strong> Glistening Melon Slice</p>
+                        <p><strong>Effect:</strong> Instantly restores health.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Potion of Night Vision</h3>
+                    <div class="potion-item">
+                        <strong>Base:</strong> Awkward Potion
+                        <p><strong>Ingredient 1:</strong> Golden Carrot</p>
+                        <p><strong>Effect:</strong> Allows seeing in the dark.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Potion of Fire Resistance</h3>
+                    <div class="potion-item">
+                        <strong>Base:</strong> Awkward Potion
+                        <p><strong>Ingredient 1:</strong> Magma Cream</p>
+                        <p><strong>Effect:</strong> Grants immunity to fire and lava damage.</p>
+                    </div>
+                </div>
+                <!-- Add more potions here -->
+            </div>
+        </section>
+
+        <!-- Mob Information & Drops Section -->
+        <section id="mob-info" class="mb-12">
+            <h2 class="section-title">Mob Information & Drops</h2>
+            <div class="grid gap-8 mob-grid">
+                <div class="card">
+                    <h3 class="subsection-title">Zombie</h3>
+                    <div class="mob-item">
+                        <strong>Health:</strong> 20 (10 hearts)
+                        <p><strong>Attack:</strong> 2-3 hearts (Easy-Hard)</p>
+                        <p><strong>Drops:</strong> Rotten Flesh (0-2), Iron Ingot (rare), Carrot (rare), Potato (rare).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Creeper</h3>
+                    <div class="mob-item">
+                        <strong>Health:</strong> 20 (10 hearts)
+                        <p><strong>Attack:</strong> Explodes (variable damage)</p>
+                        <p><strong>Drops:</strong> Gunpowder (0-2). Music Disc (if killed by Skeleton).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Cow</h3>
+                    <div class="mob-item">
+                        <strong>Health:</strong> 10 (5 hearts)
+                        <p><strong>Attack:</strong> None</p>
+                        <p><strong>Drops:</strong> Leather (0-2), Raw Beef (1-3).</p>
+                    </div>
+                </div>
+                <!-- Add more mobs here -->
+            </div>
+        </section>
+
+        <!-- Resource Location / Biome Guide Section -->
+        <section id="resource-guide" class="mb-12">
+            <h2 class="section-title">Resource Locations</h2>
+            <div class="grid gap-8 resource-grid">
+                <div class="card">
+                    <h3 class="subsection-title">Iron Ore</h3>
+                    <div class="resource-item">
+                        <strong>Location:</strong> Common in most biomes, layers 0-64.
+                        <p><strong>Usage:</strong> Iron tools, armor, buckets, shears.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Diamonds</h3>
+                    <div class="resource-item">
+                        <strong>Location:</strong> Rare, layers 0-16 (most common at Y=11-12).
+                        <p><strong>Usage:</strong> Diamond tools, armor, enchantment table.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Oak Wood</h3>
+                    <div class="resource-item">
+                        <strong>Location:</strong> Oak Forests, Plains, Rivers.
+                        <p><strong>Usage:</strong> Basic building, crafting material.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="subsection-title">Netherite Scraps</h3>
+                    <div class="resource-item">
+                        <strong>Location:</strong> Ancient Debris in the Nether, layers 8-22 (most common at Y=15).
+                        <p><strong>Usage:</strong> Upgrading Diamond gear to Netherite.</p>
+                    </div>
+                </div>
+                <!-- Add more resources here -->
+            </div>
+        </section>
+
+        <!-- Structured Project Planner Section -->
+        <section id="project-planner" class="mb-12">
+            <h2 class="section-title">Project Planner</h2>
+            <div class="card">
+                <p class="mb-4 text-center text-secondary">Organize your Minecraft goals and track your progress!</p>
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <input type="text" id="new-project-input" placeholder="New project name..." class="flex-grow">
+                    <button id="add-project-btn" class="btn flex-shrink-0">Add Project</button>
+                </div>
+                <div id="projects-container">
+                    <!-- Projects will be rendered here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Notes Section -->
+        <section id="quick-notes" class="mb-12">
+            <h2 class="section-title">Quick Notes</h2>
+            <div class="card">
+                <p class="mb-4 text-center text-secondary">Jot down important information, coordinates, or to-do lists here. Your notes save automatically!</p>
+                <textarea id="notes-textarea" placeholder="Start typing your notes..."></textarea>
+                <button id="clear-notes-btn" class="btn mt-4 w-full bg-red-600 hover:bg-red-700">Clear Notes</button>
+            </div>
+        </section>
+
+        <!-- Advancement Tracker Section -->
+        <section id="advancements" class="mb-12">
+            <h2 class="section-title">Advancement Tracker</h2>
+            <div class="card">
+                <p class="mb-4 text-center">Track your progress on multipart Minecraft advancements!</p>
+
+                <!-- Example Advancement: A Terrible Fortress -->
+                <div class="advancement-item" data-advancement="terrible-fortress">
+                    <h3 class="subsection-title flex justify-between items-center">
+                        A Terrible Fortress
+                        <span class="text-sm text-gray-400" id="terrible-fortress-progress">0%</span>
+                    </h3>
+                    <div class="progress-bar-container mb-2">
+                        <div class="progress-bar" id="terrible-fortress-bar"></div>
+                    </div>
+                    <label class="block mb-2">
+                        <input type="checkbox" data-part="find-fortress"> Find a Nether Fortress
+                    </label>
+                    <label class="block mb-2">
+                        <input type="checkbox" data-part="kill-blaze"> Kill a Blaze
+                    </label>
+                    <label class="block mb-2">
+                        <input type="checkbox" data-part="brew-potion"> Brew a Potion
+                    </label>
+                    <label class="block mb-2">
+                        <input type="checkbox" data-part="obtain-wither-skull"> Obtain a Wither Skeleton Skull
+                    </label>
+                </div>
+
+                <!-- Example Advancement: How Did We Get Here? -->
+                <div class="advancement-item" data-advancement="how-did-we-get-here">
+                    <h3 class="subsection-title flex justify-between items-center">
+                        How Did We Get Here?
+                        <span class="text-sm text-gray-400" id="how-did-we-get-here-progress">0%</span>
+                    </h3>
+                    <div class="progress-bar-container mb-2">
+                        <div class="progress-bar" id="how-did-we-get-here-bar"></div>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-2">Have every effect applied at the same time:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                        <label class="block"><input type="checkbox" data-part="absorption"> Absorption</label>
+                        <label class="block"><input type="checkbox" data-part="bad-omen"> Bad Omen</label>
+                        <label class="block"><input type="checkbox" data-part="blindness"> Blindness</label>
+                        <label class="block"><input type="checkbox" data-part="conduit-power"> Conduit Power</label>
+                        <label class="block"><input type="checkbox" data-part="confusion"> Confusion (Nausea)</label>
+                        <label class="block"><input type="checkbox" data-part="dolphins-grace"> Dolphin's Grace</label>
+                        <label class="block"><input type="checkbox" data-part="fire-resistance"> Fire Resistance</label>
+                        <label class="block"><input type="checkbox" data-part="glowing"> Glowing</label>
+                        <label class="block"><input type="checkbox" data-part="haste"> Haste</label>
+                        <label class="block"><input type="checkbox" data-part="health-boost"> Health Boost</label>
+                        <label class="block"><input type="checkbox" data-part="hero-of-the-village"> Hero of the Village</label>
+                        <label class="block"><input type="checkbox" data-part="hunger"> Hunger</label>
+                        <label class="block"><input type="checkbox" data-part="instant-health"> Instant Health</label>
+                        <label class="block"><input type="checkbox" data-part="instant-damage"> Instant Damage</label>
+                        <label class="block"><input type="checkbox" data-part="invisibility"> Invisibility</label>
+                        <label class="block"><input type="checkbox" data-part="jump-boost"> Jump Boost</label>
+                        <label class="block"><input type="checkbox" data-part="levitation"> Levitation</label>
+                        <label class="block"><input type="checkbox" data-part="luck"> Luck</label>
+                        <label class="block"><input type="checkbox" data-part="mining-fatigue"> Mining Fatigue</label>
+                        <label class="block"><input type="checkbox" data-part="night-vision"> Night Vision</label>
+                        <label class="block"><input type="checkbox" data-part="poison"> Poison</label>
+                        <label class="block"><input type="checkbox" data-part="regeneration"> Regeneration</label>
+                        <label class="block"><input type="checkbox" data-part="resistance"> Resistance</label>
+                        <label class="block"><input type="checkbox" data-part="saturation"> Saturation</label>
+                        <label class="block"><input type="checkbox" data-part="slow-falling"> Slow Falling</label>
+                        <label class="block"><input type="checkbox" data-part="slowness"> Slowness</label>
+                        <label class="block"><input type="checkbox" data-part="speed"> Speed</label>
+                        <label class="block"><input type="checkbox" data-part="strength"> Strength</label>
+                        <label class="block"><input type="checkbox" data-part="unluck"> Unluck</label>
+                        <label class="block"><input type="checkbox" data-part="water-breathing"> Water Breathing</label>
+                        <label class="block"><input type="checkbox" data-part="weakness"> Weakness</label>
+                        <label class="block"><input type="checkbox" data-part="wither"> Wither</label>
+                    </div>
+                </div>
+
+                <!-- Add more advancements here following the same structure -->
+            </div>
+        </section>
+
+        <!-- More Stuff Section -->
+        <section id="more-stuff" class="mb-12">
+            <h2 class="section-title">More Stuff Coming Soon!</h2>
+            <div class="card text-center">
+                <p class="text-lg mb-4">This section is reserved for future content like:</p>
+                <ul class="list-disc list-inside text-left mx-auto max-w-md">
+                    <li>Mob Spawning Mechanics</li>
+                    <li>Redstone Guides</li>
+                    <li>Farm Designs</li>
+                    <li>Biome Information</li>
+                    <li>And much more!</li>
+                </ul>
+                <p class="mt-6">Stay tuned for updates!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-950 bg-opacity-90 py-6 text-center text-gray-400">
+        <p>&copy; 2025 Minecraft Hub. All rights reserved. Not affiliated with Mojang Studios.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

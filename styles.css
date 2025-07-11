@@ -1,0 +1,360 @@
+ /* Enhanced Dark Mode Styles */
+@font-face {
+  font-family: Regular;
+  src: url(MinecraftRegular-Bmg3.otf);
+}
+@font-face {
+  font-family: Minecraft;
+  src: url(MinecraftTen-VGORe.ttf);
+}
+
+        :root {
+            --bg-body: #0c0c0c;
+            --bg-card: #1a1a1a;
+            --bg-item: #222222;
+            --text-primary: #f5f5f5;
+            --text-secondary: #dcdcdc;
+            --accent-green: #a0d468;
+            --accent-blue: #68a0d4;
+            --border-dark: #333333;
+            --shadow-dark: rgba(0, 0, 0, 0.9);
+            --btn-primary: #5cb85c;
+            --btn-primary-hover: #4cae4c;
+        }
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        body {
+            font-family: 'Regular', sans-serif; /* Body font */
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        /* Header specific font */
+        h1, h2, h3 {
+            font-family: 'Minecraft', cursive; /* Header font */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem; /* Increased container padding */
+        }
+        .minecraft-bg {
+            background-image: url('bakcground.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card {
+            background-color: var(--bg-card);
+            border: 2px solid var(--border-dark);
+            border-radius: 8px;
+            padding: 2rem; /* Increased card padding */
+            box-shadow: 4px 4px 0px var(--shadow-dark);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+        }
+        .card:hover {
+            transform: translateY(-3px); /* Lift card slightly on hover */
+            box-shadow: 6px 6px 0px var(--shadow-dark); /* Deeper shadow on hover */
+        }
+        .btn {
+            background-color: var(--btn-primary);
+            color: var(--text-primary);
+            padding: 0.85rem 1.75rem; /* Slightly larger buttons */
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s; /* Added box-shadow transition */
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+        }
+        .btn:hover {
+            background-color: var(--btn-primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7); /* Slightly more pronounced shadow on hover */
+        }
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+        }
+        .section-title {
+            font-size: 2.5rem; /* Slightly larger title */
+            font-weight: 700;
+            color: var(--accent-green);
+            text-shadow: 4px 4px 0px var(--shadow-dark); /* More pronounced shadow */
+            margin-bottom: 2rem; /* Increased margin */
+            text-align: center;
+        }
+        .subsection-title {
+            font-size: 1.85rem; /* Slightly larger subsection title */
+            font-weight: 600;
+            color: var(--accent-green);
+            margin-bottom: 1.25rem; /* Increased margin */
+            display: flex;
+            align-items: center;
+        }
+        .item-icon-placeholder {
+            width: 36px; /* Slightly larger icon placeholder */
+            height: 36px;
+            background-color: #555555;
+            border-radius: 4px;
+            margin-right: 1rem; /* Increased margin */
+            flex-shrink: 0;
+        }
+        .enchantment-item, .recipe-item, .potion-item, .mob-item, .resource-item, .project-task-item {
+            background-color: var(--bg-item);
+            border-left: 4px solid var(--accent-green);
+            padding: 1rem 1.25rem; /* Increased padding */
+            margin-bottom: 1rem; /* Increased margin */
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+        }
+        .enchantment-item:hover, .recipe-item:hover, .potion-item:hover, .mob-item:hover, .resource-item:hover, .project-task-item:hover {
+            background-color: #2a2a2a; /* Slightly lighter on hover */
+        }
+        .enchantment-item strong, .recipe-item strong, .potion-item strong, .mob-item strong, .resource-item strong, .project-task-item strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.5rem; /* Increased margin here for spacing */
+        }
+        .enchantment-item p, .recipe-item p, .potion-item p, .mob-item p, .resource-item p, .project-task-item p {
+            font-size: 0.95rem; /* Slightly larger description text */
+            color: var(--text-secondary);
+            margin-left: 0;
+        }
+        .advancement-item {
+            background-color: var(--bg-item);
+            border-left: 4px solid var(--accent-blue);
+            padding: 1.25rem; /* Increased padding */
+            margin-bottom: 1.25rem; /* Increased margin */
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+        }
+        .advancement-item:hover {
+            background-color: #2a2a2a; /* Slightly lighter on hover */
+        }
+        .advancement-item input, .project-task-item input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 20px; /* Slightly larger checkbox */
+            height: 20px;
+            border: 2px solid var(--accent-green);
+            border-radius: 3px;
+            background-color: var(--bg-body);
+            margin-right: 0.6rem;
+            cursor: pointer;
+            position: relative;
+            top: 4px; /* Adjust vertical alignment */
+            transition: background-color 0.2s, border-color 0.2s; /* Smooth checkbox transition */
+        }
+        .advancement-item input:checked, .project-task-item input[type="checkbox"]:checked {
+            background-color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+        .advancement-item input:checked::after, .project-task-item input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            font-size: 16px; /* Larger checkmark */
+            color: var(--bg-body);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .progress-bar-container {
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-dark);
+            border-radius: 5px;
+            height: 22px; /* Slightly taller progress bar */
+            overflow: hidden;
+            margin-top: 0.75rem; /* Increased margin */
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: var(--accent-green);
+            width: 0%;
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+            text-align: center;
+            color: var(--bg-body);
+            font-size: 0.9rem; /* Larger text in progress bar */
+            line-height: 22px;
+        }
+
+        /* Responsive adjustments for main enchantment grid */
+        .enchantment-grid, .recipe-grid, .potion-grid, .mob-grid, .resource-grid {
+            grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default for small screens */
+        }
+        @media (min-width: 768px) { /* md breakpoint and up */
+            .enchantment-grid, .recipe-grid, .potion-grid, .mob-grid, .resource-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* Always 2 columns from 768px up */
+            }
+        }
+        textarea, input[type="text"] {
+            background-color: var(--bg-item);
+            border: 1px solid var(--border-dark);
+            color: var(--text-primary);
+            padding: 0.75rem;
+            border-radius: 6px;
+            width: 100%;
+            resize: vertical; /* Allow vertical resizing for textarea */
+            font-family: 'Regular', sans-serif; /* Ensure notes and inputs use the body font */
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s; /* Smooth focus transition */
+        }
+        textarea:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 2px rgba(160, 212, 104, 0.5); /* Green glow on focus */
+        }
+
+        /* Project Planner Specific Styles */
+        .project-card {
+            background-color: var(--bg-card);
+            border: 2px solid var(--border-dark);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 3px 3px 0px var(--shadow-dark);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+        }
+        .project-card:hover {
+            transform: translateY(-2px); /* Lift card slightly on hover */
+            box-shadow: 5px 5px 0px var(--shadow-dark); /* Deeper shadow on hover */
+        }
+        .project-card h4 {
+            font-family: 'Minecraft', cursive;
+            font-size: 1.5rem;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+        .project-task-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .project-task-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-item);
+            border-left: 4px solid var(--accent-blue); /* Blue accent for tasks */
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out, opacity 0.3s ease-in-out; /* Smooth hover and completion effect */
+        }
+        .project-task-item:hover:not(.completed) {
+            background-color: #2a2a2a; /* Slightly lighter on hover */
+        }
+        .project-task-item.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+            border-left-color: #555555; /* Grey out completed tasks */
+        }
+        .project-task-item label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            flex-grow: 1;
+        }
+        .project-task-item .delete-task-btn, .delete-project-btn {
+            background-color: #dc2626; /* Red delete button */
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: background-color 0.2s;
+        }
+        .project-task-item .delete-task-btn:hover, .delete-project-btn:hover {
+            background-color: #b91c1c;
+        }
+
+        /* Dropdown Navbar Specific Styles */
+        .navbar-dropdown {
+            position: relative;
+            display: inline-block; /* Allows button and dropdown to be in flow */
+            z-index: 100; /* Ensure dropdown appears on top */
+        }
+        .dropdown-content {
+            display: none; /* Controlled by JS and .show class */
+            position: absolute;
+            background-color: #1a1a1a; /* Dark background for dropdown */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+            border-radius: 8px;
+            padding: 12px 0;
+            right: 0; /* Align to the right of the button */
+            top: 100%; /* Position below the button */
+            margin-top: 10px; /* Spacing below the button */
+            border: 2px solid var(--border-dark);
+            opacity: 0; /* Start hidden for transition */
+            transform: translateY(-10px); /* Start slightly above for slide effect */
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Smooth transition */
+            pointer-events: none; /* Prevent interaction when hidden */
+        }
+        .dropdown-content.show {
+            display: block; /* Make visible */
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Slide to original position */
+            pointer-events: auto; /* Allow interaction when visible */
+        }
+        .dropdown-content a {
+            color: var(--text-primary);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Regular', sans-serif; /* Ensure dropdown items use body font */
+            font-size: 1rem;
+            transition: background-color 0.2s;
+            border-radius: 4px; /* Slight rounding for items */
+            margin: 0 8px; /* Internal spacing for items */
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-item); /* Hover color for dropdown items */
+            color: var(--accent-green);
+        }
+        /* Adjust header layout for dropdown */
+        .header-nav {
+            position: relative; /* Make header-nav a positioning context for dropdown */
+        }
+        .header-nav .btn {
+            margin-left: auto; /* Push the menu button to the right */
+        }
+
+        /* Hide the regular nav links */
+        .header-nav .flex.space-x-4 {
+            display: none;
+        }
+        #piece_icon{
+            width: 40px;
+            height: 40px;
+        }
+        /* Show the dropdown button only */
+        .header-nav .navbar-dropdown {
+            display: block;
+        }
+
+        /* For smaller screens, the dropdown will naturally stack */
+        @media (max-width: 767px) {
+            .header-nav {
+                flex-direction: column; /* Stack title and menu vertically */
+                align-items: center;
+            }
+            .header-nav .navbar-dropdown {
+                width: 100%; /* Full width dropdown button */
+                text-align: center;
+                margin-top: 1rem; /* Space between title and button */
+            }
+            .dropdown-content {
+                left: 0;
+                right: 0;
+                min-width: unset;
+                width: calc(100% - 3rem); /* Full width minus padding */
+                margin: 10px auto 0 auto; /* Center dropdown */
+            }
+        }
+        
